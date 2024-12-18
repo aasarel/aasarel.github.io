@@ -15,7 +15,7 @@
             <h2>Gallery</h2>
             <div class="icons">
                 <!-- Estaciones -->
-                <svg class="icon" id="Icons" data-id="icon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <svg class="icon" id="Icons" data-id="icon2" data-name="ACCT" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                   <g id="ACCT">
                     <rect id="background" x="0" y="0" width="256" height="256" fill="#e6e6dc"/>
                     <g id="vector">
@@ -69,67 +69,137 @@
                 <button class="color-btn" style="background-color: #96968c;" data-bgcolor="#96968c"></button>
             </div>
             
+            <label for="format-selector">Formato:</label>
+            <select id="format-selector">
+                <option value="svg">SVG</option>
+                <option value="png">PNG</option>
+                <option value="jpeg">JPEG</option>
+                <option value="pdf">PDF</option>
+            </select>
+
             <button id="download">Download</button>
         </section>
     </main>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const icons = document.querySelectorAll('.icon');
-            const iconPreview = document.getElementById('icon-preview');
-            const colorButtons = document.querySelectorAll('#color-buttons .color-btn');
-            const backgroundColorButtons = document.querySelectorAll('#background-color-buttons .color-btn');
-            const downloadButton = document.getElementById('download');
-    
-            let selectedIcon = null;
-    
-            // Select an icon to edit
-            icons.forEach(icon => {
-                icon.addEventListener('click', () => {
-                    iconPreview.innerHTML = icon.outerHTML;
-                    selectedIcon = iconPreview.querySelector('.icon');
-                });
+        const icons = document.querySelectorAll('.icon'); // Selección de iconos en la galería
+        const iconPreview = document.getElementById('icon-preview'); // Vista previa del icono seleccionado
+        const colorButtons = document.querySelectorAll('#color-buttons .color-btn'); // Botones de colores
+        const backgroundColorButtons = document.querySelectorAll('#background-color-buttons .color-btn'); // Botones para el fondo
+        const downloadButton = document.getElementById('download'); // Botón de descarga
+        const formatSelector = document.getElementById('format-selector'); // Selector de formato
+
+        let selectedIcon = null; // Variable para almacenar el icono actualmente seleccionado
+        let selectedIconName = 'icon'; // Nombre predeterminado para el archivo
+
+        // Manejar la selección de un icono desde la galería
+        icons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                iconPreview.innerHTML = icon.outerHTML; // Clonar el contenido del icono seleccionado
+                selectedIcon = iconPreview.querySelector('.icon');
+                selectedIconName = icon.dataset.name || 'icon'; // Obtener el nombre del icono o usar "icon" como predeterminado
             });
-    
-            // Update icon color when a color button is clicked
-            colorButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    if (selectedIcon) {
-                        const color = button.dataset.color;
-                        selectedIcon.querySelectorAll('.icon path').forEach(path => {
-                            path.setAttribute('fill', color);
-                        });
-                    }
-                });
-            });
-    
-            // Update background color when a background color button is clicked
-            backgroundColorButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    if (selectedIcon) {
-                        const bgColor = button.dataset.bgcolor;
-                        selectedIcon.querySelector('#background').setAttribute('fill', bgColor);
-                    }
-                });
-            });
-    
-            // Handle download button click
-            downloadButton.addEventListener('click', () => {
+        });
+
+        // Cambiar el color de los elementos internos del icono seleccionado
+        colorButtons.forEach(button => {
+            button.addEventListener('click', () => {
                 if (selectedIcon) {
-                    const svgData = new XMLSerializer().serializeToString(selectedIcon);
-                    const blob = new Blob([svgData], { type: 'image/svg+xml' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'icon.svg';
-                    a.click();
-                    URL.revokeObjectURL(url);
+                    const color = button.dataset.color; // Obtener el color desde el botón
+                    selectedIcon.querySelectorAll('path').forEach(path => {
+                        path.setAttribute('fill', color);
+                    });
+                } else {
+                    alert('Primero selecciona un icono para editar.');
                 }
             });
         });
+
+        // Cambiar el color de fondo del icono seleccionado
+        backgroundColorButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (selectedIcon) {
+                    const bgColor = button.dataset.bgcolor; // Obtener el color del botón
+                    const background = selectedIcon.querySelector('#background'); // Seleccionar el elemento de fondo
+                    if (background) {
+                        background.setAttribute('fill', bgColor);
+                    } else {
+                        alert('Este icono no tiene un fondo definido.');
+                    }
+                } else {
+                    alert('Primero selecciona un icono para editar.');
+                }
+            });
+        });
+
+        // Descargar el icono en el formato seleccionado
+        downloadButton.addEventListener('click', async () => {
+            if (selectedIcon) {
+                const format = formatSelector.value; // Obtener el formato seleccionado (SVG, PNG, JPEG, PDF)
+                
+                if (format === 'svg') {
+                    // Descargar como SVG
+                    const svgData = new XMLSerializer().serializeToString(selectedIcon);
+                    const blob = new Blob([svgData], { type: 'image/svg+xml' });
+                    const url = URL.createObjectURL(blob);
+                    downloadFile(url, `${selectedIconName}.svg`);
+                } else if (['png', 'jpeg'].includes(format)) {
+                    // Convertir a PNG o JPEG usando Canvas API
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    const svgData = new XMLSerializer().serializeToString(selectedIcon);
+                    const img = new Image();
+                    
+                    img.onload = () => {
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+                        const imageUrl = canvas.toDataURL(`image/${format}`);
+                        downloadFile(imageUrl, `${selectedIconName}.${format}`);
+                    };
+                    img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
+                } else if (format === 'pdf') {
+                    // Generar un PDF con jsPDF
+                    const svgData = new XMLSerializer().serializeToString(selectedIcon);
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    const img = new Image();
+
+                    img.onload = () => {
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+                        const imageUrl = canvas.toDataURL('image/png');
+
+                        const pdf = new jsPDF();
+                        pdf.addImage(imageUrl, 'PNG', 10, 10, 190, 190); // Ajustar dimensiones según sea necesario
+                        pdf.save(`${selectedIconName}.pdf`);
+                    };
+                    img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
+                }
+            } else {
+                alert('Selecciona y edita un icono antes de descargar.');
+            }
+        });
+
+        // Función para descargar un archivo
+        function downloadFile(url, fileName) {
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    });
+
+
+
     </script>
-</body>
+</body>s
 </html>
 
 

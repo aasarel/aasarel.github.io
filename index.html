@@ -1,203 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icon Editor</title>
+    <title>Custom Header</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Editor de iconos</h1>
+    <!--Header-->
+    <header class="header">
+        <a href="#" class="logo">UI Sener</a>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <div class="dropdown">
+                <a href="#">Recursos</a>
+                <div class="dropdown-content">
+                    <a href="#">Iconos</a>
+                    <a href="#">Logotipos</a>
+                    <a href="#">Paleta de colores</a>
+                </div>
+            </div>
+            <a href="#">Solicitar</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <!--Search bar-->
+        <div class="search-bar">
+            <input type="text" placeholder="Search icons, photos, and more...">
+            <button>
+                <img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" alt="Search">
+            </button>
+        </div>
+        <a href="#" class="cta">Sign In</a>
     </header>
-    <main>
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="icons">
-                <!-- Estaciones -->
-                <svg class="icon" id="Icons" data-id="icon2" data-name="ACCT" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                  <g id="ACCT">
-                    <rect id="background" x="0" y="0" width="256" height="256" fill="#e6e6dc"/>
-                    <g id="vector">
-                      <path d="M69.5,69.69c-2.43,2.43-6.36,2.43-8.78,0-2.43-2.42-2.43-6.35,0-8.78,2.42-2.42,6.36-2.42,8.78,0,2.42,2.43,2.42,6.36,0,8.78Z" fill="#00524c"/>
-                      <path d="M195.24,195.44c-2.43,2.42-6.36,2.42-8.78,0-2.43-2.43-2.43-6.36,0-8.78,2.42-2.43,6.35-2.43,8.78,0,2.42,2.42,2.42,6.35,0,8.78Z" fill="#00524c"/>
-                      <path d="M69.5,195.44c-2.43,2.42-6.36,2.42-8.78-.01-2.43-2.42-2.43-6.35,0-8.78,2.42-2.42,6.35-2.42,8.78,0,2.42,2.43,2.42,6.36,0,8.79Z" fill="#00524c"/>
-                      <path d="M195.24,69.7c-2.42,2.42-6.35,2.42-8.78,0-2.42-2.43-2.42-6.36,0-8.78,2.43-2.43,6.36-2.43,8.78,0,2.43,2.42,2.43,6.35,0,8.78Z" fill="#00524c"/>
-                      <path d="M55.055,184.064c-1.573,0-3.121-.74-4.094-2.124-22.506-31.995-22.556-75.137-.125-107.352,1.578-2.266,4.695-2.824,6.96-1.247,2.266,1.578,2.824,4.694,1.247,6.96-20.039,28.78-20,67.313.098,95.885,1.589,2.258,1.046,5.377-1.213,6.966-.875.616-1.878.911-2.872.911Z" fill="#00524c"/>
-                      <path d="M127.466,221.821c-18.821,0-37.47-5.527-53.186-16.582-2.258-1.588-2.801-4.708-1.212-6.966s4.708-2.801,6.966-1.212c28.044,19.728,66.624,19.695,96.002-.08,2.291-1.541,5.398-.936,6.94,1.356,1.542,2.291.935,5.398-1.356,6.94-16.386,11.03-35.356,16.544-54.154,16.544Z" fill="#00524c"/>
-                      <path d="M200.897,184.069c-1.003,0-2.017-.301-2.896-.928-2.249-1.602-2.774-4.724-1.172-6.974,20.155-28.298,20.157-66.869.005-95.979-1.572-2.271-1.005-5.385,1.265-6.957s5.386-1.005,6.957,1.265c22.543,32.563,22.511,75.753-.081,107.473-.976,1.369-2.515,2.1-4.077,2.1Z" fill="#00524c"/>
-                      <path d="M128.05,133.58c-1.17.47-2.48.47-3.65,0,.59.23,1.21.35,1.83.35s1.24-.12,1.82-.35Z" fill="#202b52"/>
-                      <path d="M179.075,60.397c-.995,0-1.999-.296-2.874-.912-28.714-20.211-67.356-20.294-96.155-.205-2.265,1.579-5.381,1.024-6.962-1.241-1.58-2.265-1.024-5.381,1.24-6.961,32.238-22.486,75.492-22.396,107.632.23,2.258,1.589,2.8,4.708,1.21,6.966-.973,1.383-2.521,2.123-4.093,2.123Z" fill="#00524c"/>
-                      <path d="M173.02,132.62c-1.48-2.74-4.91-3.76-7.65-2.27-2.75,1.48-3.77,4.91-2.28,7.65,6.59,12.19,7.45,22.55,2.3,27.7-3.52,3.51-10.81,3.62-20.01.29-4.15-1.51-8.46-3.62-12.79-6.27,4.22-3.44,8.46-7.27,12.62-11.43,22.1-22.09,39.98-51.78,27.01-64.75-4.11-4.11-12.47-7.39-28.9.35-3.26,1.53-6.64,3.42-10.1,5.62-1.85-1.17-3.74-2.29-5.66-3.35-25.45-14.67-38.73-10.21-45.38-3.87-3.99,3.8-6.14,9.27-6.21,15.81-.19,15.3,10.66,35.76,28.3,53.4,2.92,2.92,5.93,5.66,9,8.21-12.27,7.5-20.96,8.71-23.45,6.23-2.03-2.04-1.77-8.55,3.39-18.5,1.44-2.77.36-6.18-2.41-7.62-2.77-1.43-6.18-.35-7.61,2.41-9.83,18.93-5.07,27.98-1.35,31.7,2.02,2.02,5.76,4.46,12.03,4.46,4.17,0,9.46-1.08,16.11-4.09,4.12-1.87,8.48-4.35,12.95-7.36,6.23,4.18,12.53,7.47,18.6,9.67,5.7,2.06,10.99,3.09,15.72,3.09,6.62,0,12.13-2.02,16.13-6.01,9.02-9.02,8.89-23.98-.36-41.07ZM148.13,94.11c8.77-4.13,14.41-4.27,16.1-2.58,2.2,2.2,1.14,9.84-4.96,20.71-2.53-2.75-5.29-5.71-6.22-6.67-3.1-3.17-6.38-6.15-9.82-8.91,1.67-.95,3.3-1.8,4.9-2.55ZM87.26,97.99c.04-3.47.96-6.08,2.71-7.76,6.56-6.25,19.83-1.04,28.95,3.82l-.04.07,3.55,1.88h.01c.24.13.47.27.71.4-5.25,4.08-10.54,8.77-15.68,13.91-4.16,4.16-7.99,8.38-11.42,12.59-5.62-9.17-8.87-18.06-8.79-24.91ZM112.26,143.51c-3.44-3.44-6.63-7.05-9.47-10.7,3.69-4.75,7.93-9.54,12.67-14.27,5.86-5.86,11.88-11.05,17.75-15.35,4.17,3.1,8.1,6.53,11.75,10.27,1.19,1.22,5.29,5.64,7.98,8.61-4.07,5.62-9.25,11.76-15.72,18.23-5.01,5.01-9.8,9.22-14.29,12.69-3.63-2.84-7.21-6.03-10.67-9.48Z" fill="#00524c"/>
-                      <path d="M129.66,132.51c-.48.47-1.02.83-1.61,1.07-.58.23-1.2.35-1.82.35s-1.24-.12-1.83-.35c-.58-.24-1.13-.6-1.6-1.07-1.9-1.89-1.9-4.97,0-6.86.94-.95,2.19-1.43,3.43-1.43s2.48.48,3.43,1.43c1.9,1.89,1.9,4.97,0,6.86Z" fill="#00524c"/>
-                    </g>
-                  </g>
-                </svg>
 
-                <!-- Puentes -->
-                <svg class="icon" id="Icons" data-id="icon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                  <g id="ACCU">
-                    <rect id="background" x="0" y="0" width="256" height="256" fill="#e6e6dc"/>
-                    <g id="vector">
-                      <path d="M223.75,128c0-14.81-18.84-26.84-48.53-33.01-.84-3.99-1.83-7.96-2.97-11.89-11.18-41.65-28.92-50.79-41.86-51.1-7.49-.18-14.85,3.08-21.35,9.42-16.22,15.84-26.29,49.01-26.29,86.58,0,8.17.48,16.08,1.39,23.61-25.64-5.15-40.39-14.62-40.39-23.61,0-7.31,9.91-14.8,26.51-20.05,2.63-.84,4.09-3.65,3.26-6.28-.84-2.63-3.65-4.09-6.28-3.26-21.6,6.84-33.49,17.34-33.49,29.59,0,15.96,20.08,28.43,51.99,34.12,6.66,36.51,23.86,61.88,44.53,61.88,17.94,0,32.84-15.52,40.9-42.58.79-2.64-.72-5.43-3.37-6.21-2.64-.79-5.43.71-6.22,3.36-6.7,22.52-18.11,35.43-31.31,35.43-13.51,0-27.73-19.21-34.09-50.31,9.56,1.18,19.98,1.81,31.07,1.81,55.92,0,96.5-15.77,96.5-37.5ZM213.75,128c0,8.01-13.46,16.58-35.71,21.98.31-6.41.67-15.98.71-18.92.1-8.48-.44-16.92-1.62-25.26,22.79,5.39,36.62,14.08,36.62,22.2ZM116.03,48.18c4.58-4.48,9.35-6.7,14.12-6.58,15.7.38,25.33,19.94,30.94,38.43l-.12.03,1.81,5.94h.01c.63,2.22,1.22,4.45,1.74,6.69-11.31-1.68-23.85-2.59-37.28-2.59-10.88,0-21.29.62-31.05,1.84,3.87-19.19,10.84-34.98,19.83-43.76ZM94.42,153.35c-1.08-7.87-1.67-16.35-1.67-25.35,0-8.73.59-17.26,1.7-25.34,10.19-1.44,21.21-2.16,32.8-2.16,14.56,0,27.85,1.18,39.42,3.17,1.5,8.99,2.2,18.1,2.08,27.27-.04,3.23-.52,15.4-.83,21.17-11.86,2.12-25.59,3.39-40.67,3.39-12.07,0-23.07-.78-32.83-2.15Z" fill="#00524c"/>
-                      <circle cx="127.5" cy="127.5" r="7.5" fill="#00524c"/>
-                    </g>
-                  </g>
-                </svg>
-            </div>
-        </section>
+    <div class="content-layout">
 
-        <section id="editor">
-            <h2>Edit Icon</h2>
-            <div id="icon-preview"></div>
-            
-            <label for="color">Choose a color:</label>
-            <div id="color-buttons">
-                <button class="color-btn" style="background-color: #00524c;" data-color="#00524c"></button>
-                <button class="color-btn" style="background-color: #62cdb4;" data-color="#62cdb4"></button>
-                <button class="color-btn" style="background-color: #ffffff;" data-color="#ffffff"></button>
-                <button class="color-btn" style="background-color: #e6e6dc;" data-color="#e6e6dc"></button>
-                <button class="color-btn" style="background-color: #96968c;" data-color="#96968c"></button>
-            </div>
-            
-            <label for="background-color">Choose background color:</label>
-            <div id="background-color-buttons">
-                <button class="color-btn" style="background-color: #00524c;" data-bgcolor="#00524c"></button>
-                <button class="color-btn" style="background-color: #62cdb4;" data-bgcolor="#62cdb4"></button>
-                <button class="color-btn" style="background-color: #ffffff;" data-bgcolor="#ffffff"></button>
-                <button class="color-btn" style="background-color: #e6e6dc;" data-bgcolor="#e6e6dc"></button>
-                <button class="color-btn" style="background-color: #96968c;" data-bgcolor="#96968c"></button>
-            </div>
-            
-            <label for="format-selector">Formato:</label>
-            <select id="format-selector">
-                <option value="svg">SVG</option>
-                <option value="png">PNG</option>
-                <option value="jpeg">JPEG</option>
-                <option value="pdf">PDF</option>
-            </select>
+        <!-- Side Bar -->
+        <aside class="sidebar">
+            <h3>Editar</h3>
+            <p>Seleccione un icono para editarlo y descargarlo.</p>
+            <section id="editor">
+                <div id="icon-preview"></div>
+                <label for="color">Choose a color:</label>
+                <div id="color-buttons">
+                    <button class="color-btn" style="background-color: #00524c;" data-color="#00524c"></button>
+                    <button class="color-btn" style="background-color: #62cdb4;" data-color="#62cdb4"></button>
+                    <button class="color-btn" style="background-color: #ffffff;" data-color="#ffffff"></button>
+                    <button class="color-btn" style="background-color: #e6e6dc;" data-color="#e6e6dc"></button>
+                    <button class="color-btn" style="background-color: #96968c;" data-color="#96968c"></button>
+                </div>
+                <label for="background-color">Choose background color:</label>
+                <div id="background-color-buttons">
+                    <button class="color-btn" style="background-color: #00524c;" data-bgcolor="#00524c"></button>
+                    <button class="color-btn" style="background-color: #62cdb4;" data-bgcolor="#62cdb4"></button>
+                    <button class="color-btn" style="background-color: #ffffff;" data-bgcolor="#ffffff"></button>
+                    <button class="color-btn" style="background-color: #e6e6dc;" data-bgcolor="#e6e6dc"></button>
+                    <button class="color-btn" style="background-color: #96968c;" data-bgcolor="#96968c"></button>
+                </div>
+                <button id="download">Download</button>
+                <ul id="format-options" style="display: none; list-style-type: none; padding: 0;">
+                    <li><a href="#" onclick="downloadFile('svg')">SVG</a></li>
+                    <li><a href="#" onclick="downloadFile('png')">PNG</a></li>
+                    <li><a href="#" onclick="downloadFile('pdf')">PDF</a></li>
+                    <li><a href="#" onclick="downloadFile('jpg')">JPG</a></li>
+                </ul>
+            </section>
+        </aside>
 
-            <button id="download">Download</button>
-        </section>
-    </main>
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Bienvenido UI Sener</h1>
+            <p>Encuentra, personaliza y descarga los elementos visuales perfectos para tus proyectos del Tren Interurbano y Tren Maya.</p>
+    
+            <section class="featured-grid">
+                <div class="grid-item">
+                    <img src="/img/logos/sener.svg" alt="sener">
+                    <h3>Sener</h3>
+                    <p>Recursos grupo sener.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/img/logos/tren-interurbano.svg" alt="tren-interurbano">
+                    <h3>Tren Interurbano</h3>
+                    <p>Recursos Tren Interurbano.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="/img/logos/maya.svg" alt="tren-maya">
+                    <h3>Tren Maya</h3>
+                    <p>Recursos Tren Maya</p>
+                </div>
+            </section>
+    
+            <!-- Icon Gallery Start -->
+            <section class="icon-gallery">
+                <h2>Galería de Iconos</h2>
+                <div class="grid-container">
+                    <!-- ACCT -->
+                    <div class="icon-item">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <g id="ACCT">
+                                <rect id="background" x="0" y="0" width="256" height="256" fill="#e6e6dc"/>
+                                <g id="vector">
+                                  <path d="M69.5,69.69c-2.43,2.43-6.36,2.43-8.78,0-2.43-2.42-2.43-6.35,0-8.78,2.42-2.42,6.36-2.42,8.78,0,2.42,2.43,2.42,6.36,0,8.78Z" fill="#00524c"/>
+                                  <path d="M195.24,195.44c-2.43,2.42-6.36,2.42-8.78,0-2.43-2.43-2.43-6.36,0-8.78,2.42-2.43,6.35-2.43,8.78,0,2.42,2.42,2.42,6.35,0,8.78Z" fill="#00524c"/>
+                                  <path d="M69.5,195.44c-2.43,2.42-6.36,2.42-8.78-.01-2.43-2.42-2.43-6.35,0-8.78,2.42-2.42,6.35-2.42,8.78,0,2.42,2.43,2.42,6.36,0,8.79Z" fill="#00524c"/>
+                                  <path d="M195.24,69.7c-2.42,2.42-6.35,2.42-8.78,0-2.42-2.43-2.42-6.36,0-8.78,2.43-2.43,6.36-2.43,8.78,0,2.43,2.42,2.43,6.35,0,8.78Z" fill="#00524c"/>
+                                  <path d="M55.055,184.064c-1.573,0-3.121-.74-4.094-2.124-22.506-31.995-22.556-75.137-.125-107.352,1.578-2.266,4.695-2.824,6.96-1.247,2.266,1.578,2.824,4.694,1.247,6.96-20.039,28.78-20,67.313.098,95.885,1.589,2.258,1.046,5.377-1.213,6.966-.875.616-1.878.911-2.872.911Z" fill="#00524c"/>
+                                  <path d="M127.466,221.821c-18.821,0-37.47-5.527-53.186-16.582-2.258-1.588-2.801-4.708-1.212-6.966s4.708-2.801,6.966-1.212c28.044,19.728,66.624,19.695,96.002-.08,2.291-1.541,5.398-.936,6.94,1.356,1.542,2.291.935,5.398-1.356,6.94-16.386,11.03-35.356,16.544-54.154,16.544Z" fill="#00524c"/>
+                                  <path d="M200.897,184.069c-1.003,0-2.017-.301-2.896-.928-2.249-1.602-2.774-4.724-1.172-6.974,20.155-28.298,20.157-66.869.005-95.979-1.572-2.271-1.005-5.385,1.265-6.957s5.386-1.005,6.957,1.265c22.543,32.563,22.511,75.753-.081,107.473-.976,1.369-2.515,2.1-4.077,2.1Z" fill="#00524c"/>
+                                  <path d="M128.05,133.58c-1.17.47-2.48.47-3.65,0,.59.23,1.21.35,1.83.35s1.24-.12,1.82-.35Z" fill="#202b52"/>
+                                  <path d="M179.075,60.397c-.995,0-1.999-.296-2.874-.912-28.714-20.211-67.356-20.294-96.155-.205-2.265,1.579-5.381,1.024-6.962-1.241-1.58-2.265-1.024-5.381,1.24-6.961,32.238-22.486,75.492-22.396,107.632.23,2.258,1.589,2.8,4.708,1.21,6.966-.973,1.383-2.521,2.123-4.093,2.123Z" fill="#00524c"/>
+                                  <path d="M173.02,132.62c-1.48-2.74-4.91-3.76-7.65-2.27-2.75,1.48-3.77,4.91-2.28,7.65,6.59,12.19,7.45,22.55,2.3,27.7-3.52,3.51-10.81,3.62-20.01.29-4.15-1.51-8.46-3.62-12.79-6.27,4.22-3.44,8.46-7.27,12.62-11.43,22.1-22.09,39.98-51.78,27.01-64.75-4.11-4.11-12.47-7.39-28.9.35-3.26,1.53-6.64,3.42-10.1,5.62-1.85-1.17-3.74-2.29-5.66-3.35-25.45-14.67-38.73-10.21-45.38-3.87-3.99,3.8-6.14,9.27-6.21,15.81-.19,15.3,10.66,35.76,28.3,53.4,2.92,2.92,5.93,5.66,9,8.21-12.27,7.5-20.96,8.71-23.45,6.23-2.03-2.04-1.77-8.55,3.39-18.5,1.44-2.77.36-6.18-2.41-7.62-2.77-1.43-6.18-.35-7.61,2.41-9.83,18.93-5.07,27.98-1.35,31.7,2.02,2.02,5.76,4.46,12.03,4.46,4.17,0,9.46-1.08,16.11-4.09,4.12-1.87,8.48-4.35,12.95-7.36,6.23,4.18,12.53,7.47,18.6,9.67,5.7,2.06,10.99,3.09,15.72,3.09,6.62,0,12.13-2.02,16.13-6.01,9.02-9.02,8.89-23.98-.36-41.07ZM148.13,94.11c8.77-4.13,14.41-4.27,16.1-2.58,2.2,2.2,1.14,9.84-4.96,20.71-2.53-2.75-5.29-5.71-6.22-6.67-3.1-3.17-6.38-6.15-9.82-8.91,1.67-.95,3.3-1.8,4.9-2.55ZM87.26,97.99c.04-3.47.96-6.08,2.71-7.76,6.56-6.25,19.83-1.04,28.95,3.82l-.04.07,3.55,1.88h.01c.24.13.47.27.71.4-5.25,4.08-10.54,8.77-15.68,13.91-4.16,4.16-7.99,8.38-11.42,12.59-5.62-9.17-8.87-18.06-8.79-24.91ZM112.26,143.51c-3.44-3.44-6.63-7.05-9.47-10.7,3.69-4.75,7.93-9.54,12.67-14.27,5.86-5.86,11.88-11.05,17.75-15.35,4.17,3.1,8.1,6.53,11.75,10.27,1.19,1.22,5.29,5.64,7.98,8.61-4.07,5.62-9.25,11.76-15.72,18.23-5.01,5.01-9.8,9.22-14.29,12.69-3.63-2.84-7.21-6.03-10.67-9.48Z" fill="#00524c"/>
+                                  <path d="M129.66,132.51c-.48.47-1.02.83-1.61,1.07-.58.23-1.2.35-1.82.35s-1.24-.12-1.83-.35c-.58-.24-1.13-.6-1.6-1.07-1.9-1.89-1.9-4.97,0-6.86.94-.95,2.19-1.43,3.43-1.43s2.48.48,3.43,1.43c1.9,1.89,1.9,4.97,0,6.86Z" fill="#00524c"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <h4>ACCT</h4>
+                    </div>
+    
+                    <!-- ACCU -->
+                    <div class="icon-item">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <g id="ACCU">
+                                <rect id="background" x="0" y="0" width="256" height="256" fill="#e6e6dc"/>
+                                <g id="vector">
+                                  <path d="M223.75,128c0-14.81-18.84-26.84-48.53-33.01-.84-3.99-1.83-7.96-2.97-11.89-11.18-41.65-28.92-50.79-41.86-51.1-7.49-.18-14.85,3.08-21.35,9.42-16.22,15.84-26.29,49.01-26.29,86.58,0,8.17.48,16.08,1.39,23.61-25.64-5.15-40.39-14.62-40.39-23.61,0-7.31,9.91-14.8,26.51-20.05,2.63-.84,4.09-3.65,3.26-6.28-.84-2.63-3.65-4.09-6.28-3.26-21.6,6.84-33.49,17.34-33.49,29.59,0,15.96,20.08,28.43,51.99,34.12,6.66,36.51,23.86,61.88,44.53,61.88,17.94,0,32.84-15.52,40.9-42.58.79-2.64-.72-5.43-3.37-6.21-2.64-.79-5.43.71-6.22,3.36-6.7,22.52-18.11,35.43-31.31,35.43-13.51,0-27.73-19.21-34.09-50.31,9.56,1.18,19.98,1.81,31.07,1.81,55.92,0,96.5-15.77,96.5-37.5ZM213.75,128c0,8.01-13.46,16.58-35.71,21.98.31-6.41.67-15.98.71-18.92.1-8.48-.44-16.92-1.62-25.26,22.79,5.39,36.62,14.08,36.62,22.2ZM116.03,48.18c4.58-4.48,9.35-6.7,14.12-6.58,15.7.38,25.33,19.94,30.94,38.43l-.12.03,1.81,5.94h.01c.63,2.22,1.22,4.45,1.74,6.69-11.31-1.68-23.85-2.59-37.28-2.59-10.88,0-21.29.62-31.05,1.84,3.87-19.19,10.84-34.98,19.83-43.76ZM94.42,153.35c-1.08-7.87-1.67-16.35-1.67-25.35,0-8.73.59-17.26,1.7-25.34,10.19-1.44,21.21-2.16,32.8-2.16,14.56,0,27.85,1.18,39.42,3.17,1.5,8.99,2.2,18.1,2.08,27.27-.04,3.23-.52,15.4-.83,21.17-11.86,2.12-25.59,3.39-40.67,3.39-12.07,0-23.07-.78-32.83-2.15Z" fill="#00524c"/>
+                                  <circle cx="127.5" cy="127.5" r="7.5" fill="#00524c"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <h4>ACCU</h4>
+                    </div>
+    
+                    <!-- CLIN -->
+                    <div class="icon-item">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <g id="CLIN">
+                                <rect id="background" x="0" y="0" width="256" height="256" fill="#e6e6dc"/>
+                                <g id="vector">
+                                  <path d="M207.554,136.29c-2.657,0-4.87-2.092-4.991-4.774-1.688-37.29-34.518-66.988-74.74-67.611-39.63-.646-72.384,29.084-74.585,67.61-.157,2.757-2.513,4.884-5.277,4.707-2.757-.157-4.864-2.52-4.707-5.277,1.191-20.853,10.467-40.308,26.119-54.782,15.886-14.692,36.687-22.582,58.604-22.257,21.949.34,42.694,8.337,58.416,22.518,15.924,14.363,25.214,33.768,26.159,54.64.125,2.758-2.01,5.096-4.769,5.221-.077.003-.154.005-.23.005Z" fill="#00524c"/>
+                                  <path d="M127.901,149.656c-1.28,0-2.559-.488-3.536-1.464-1.953-1.953-1.953-5.119,0-7.071l41.099-41.099c1.953-1.952,5.118-1.952,7.071,0,1.953,1.953,1.953,5.119,0,7.071l-41.099,41.099c-.977.976-2.256,1.464-3.536,1.464Z" fill="#00524c"/>
+                                  <path d="M51,152h-12c-2.761,0-5-2.239-5-5s2.239-5,5-5h12c2.761,0,5,2.239,5,5s-2.239,5-5,5Z" fill="#00524c"/>
+                                  <path d="M217,152h-13c-2.761,0-5-2.239-5-5s2.239-5,5-5h13c2.761,0,5,2.239,5,5s-2.239,5-5,5Z" fill="#00524c"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <h4>CLIN</h4>
+                    </div>
+
+                    <!-- DATA -->
+                    <div class="icon-item">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <g id="DATA">
+                                <rect id="background" x="0" y="0" width="256" height="256" fill="#e6e6dc"/>
+                                <g id="vector">
+                                  <path d="M205.97,174H50.03c-11.044,0-20.03-8.985-20.03-20.03v-39.97c0-2.762,2.239-5,5-5s5,2.238,5,5v39.97c0,5.53,4.5,10.03,10.03,10.03h155.94c5.53,0,10.03-4.5,10.03-10.03v-51.939c0-5.53-4.5-10.03-10.03-10.03H61c-2.761,0-5-2.238-5-5s2.239-5,5-5h144.97c11.044,0,20.03,8.985,20.03,20.03v51.939c0,11.045-8.985,20.03-20.03,20.03Z" fill="#00524c"/>
+                                  <path d="M115,118h-54c-2.761,0-5-2.238-5-5s2.239-5,5-5h54c2.761,0,5,2.238,5,5s-2.239,5-5,5Z" fill="#00524c"/>
+                                  <path d="M107,148h-46c-2.761,0-5-2.238-5-5s2.239-5,5-5h46c2.761,0,5,2.238,5,5s-2.239,5-5,5Z" fill="#00524c"/>
+                                  <path d="M163,148h-15c-2.209,0-4-1.791-4-4v-15c0-2.209,1.791-4,4-4h15c2.209,0,4,1.791,4,4v15c0,2.209-1.791,4-4,4ZM152,140h7v-7h-7v7Z" fill="#00524c"/>
+                                  <path d="M196,148h-15c-2.209,0-4-1.791-4-4v-15c0-2.209,1.791-4,4-4h15c2.209,0,4,1.791,4,4v15c0,2.209-1.791,4-4,4ZM185,140h7v-7h-7v7Z" fill="#00524c"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <h4>DATA</h4>
+                    </div>
+                    <!-- Añade más iconos según sea necesario -->
+                </div>
+            </section> <!-- Icon Gallery End -->
+        </main>
+
+    </div>
 
 
+    <!--Footer-->
+    <footer class="footer">
+        <p>&copy; 2025 Todos los derechos reservados.</p>
+    </footer>
+
+    <!--Scripts section -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-        const icons = document.querySelectorAll('.icon'); // Selección de iconos en la galería
-        const iconPreview = document.getElementById('icon-preview'); // Vista previa del icono seleccionado
-        const colorButtons = document.querySelectorAll('#color-buttons .color-btn'); // Botones de colores
-        const backgroundColorButtons = document.querySelectorAll('#background-color-buttons .color-btn'); // Botones para el fondo
-        const downloadButton = document.getElementById('download'); // Botón de descarga
-        const formatSelector = document.getElementById('format-selector'); // Selector de formato
-
-        let selectedIcon = null; // Variable para almacenar el icono actualmente seleccionado
-        let selectedIconName = 'icon'; // Nombre predeterminado para el archivo
-
-        // Manejar la selección de un icono desde la galería
-        icons.forEach(icon => {
-            icon.addEventListener('click', () => {
-                iconPreview.innerHTML = icon.outerHTML; // Clonar el contenido del icono seleccionado
-                selectedIcon = iconPreview.querySelector('.icon');
-                selectedIconName = icon.dataset.name || 'icon'; // Obtener el nombre del icono o usar "icon" como predeterminado
+            const icons = document.querySelectorAll('.icon'); // Selección de iconos en la galería
+            const iconPreview = document.getElementById('icon-preview'); // Vista previa del icono seleccionado
+            const colorButtons = document.querySelectorAll('#color-buttons .color-btn'); // Botones de colores
+            const backgroundColorButtons = document.querySelectorAll('#background-color-buttons .color-btn'); // Botones para el fondo
+            const downloadButton = document.getElementById('download'); // Botón de descarga
+            const formatOptions = document.getElementById('format-options'); // Lista de formatos
+    
+            let selectedIcon = null; // Variable para almacenar el icono actualmente seleccionado
+            let selectedIconName = 'icon'; // Nombre predeterminado para el archivo
+    
+            // Mostrar lista de formatos cuando se haga clic en el botón de descarga
+            downloadButton.addEventListener('click', () => {
+                formatOptions.style.display = formatOptions.style.display === 'block' ? 'none' : 'block';
             });
-        });
 
-        // Cambiar el color de los elementos internos del icono seleccionado
-        colorButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                if (selectedIcon) {
-                    const color = button.dataset.color; // Obtener el color desde el botón
-                    selectedIcon.querySelectorAll('path').forEach(path => {
-                        path.setAttribute('fill', color);
-                    });
-                } else {
-                    alert('Primero selecciona un icono para editar.');
-                }
+            // Ocultar la lista de formatos después de seleccionar una opción
+            document.querySelectorAll('#format-options a').forEach(option => {
+                option.addEventListener('click', () => {
+                    formatOptions.style.display = 'none'; // Ocultar la lista
+                });
             });
-        });
 
-        // Cambiar el color de fondo del icono seleccionado
-        backgroundColorButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                if (selectedIcon) {
-                    const bgColor = button.dataset.bgcolor; // Obtener el color del botón
-                    const background = selectedIcon.querySelector('#background'); // Seleccionar el elemento de fondo
-                    if (background) {
-                        background.setAttribute('fill', bgColor);
+    
+            // Manejar la selección de un icono desde la galería
+            icons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    iconPreview.innerHTML = icon.outerHTML; // Clonar el contenido del icono seleccionado
+                    selectedIcon = iconPreview.querySelector('.icon');
+                    selectedIconName = icon.dataset.name || 'icon'; // Obtener el nombre del icono o usar "icon" como predeterminado
+                });
+            });
+    
+            // Cambiar el color de los elementos internos del icono seleccionado
+            colorButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (selectedIcon) {
+                        const color = button.dataset.color; // Obtener el color desde el botón
+                        selectedIcon.querySelectorAll('path').forEach(path => {
+                            path.setAttribute('fill', color);
+                        });
                     } else {
-                        alert('Este icono no tiene un fondo definido.');
+                        alert('Primero selecciona un icono para editar.');
+                    }
+                });
+            });
+    
+            // Cambiar el color de fondo del icono seleccionado
+            backgroundColorButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (selectedIcon) {
+                        const bgColor = button.dataset.bgcolor; // Obtener el color del botón
+                        const background = selectedIcon.querySelector('#background'); // Seleccionar el elemento de fondo
+                        if (background) {
+                            background.setAttribute('fill', bgColor);
+                        } else {
+                            alert('Este icono no tiene un fondo definido.');
+                        }
+                    } else {
+                        alert('Primero selecciona un icono para editar.');
+                    }
+                });
+            });
+    
+            // Función para descargar el archivo en el formato seleccionado
+            function downloadFile(url, fileName) {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = fileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+    
+            // Descargar el icono en el formato seleccionado
+            function downloadIcon(format) {
+                if (selectedIcon) {
+                    if (format === 'svg') {
+                        // Descargar como SVG
+                        const svgData = new XMLSerializer().serializeToString(selectedIcon);
+                        const blob = new Blob([svgData], { type: 'image/svg+xml' });
+                        const url = URL.createObjectURL(blob);
+                        downloadFile(url, `${selectedIconName}.svg`);
+                    } else if (['png', 'jpg'].includes(format)) {
+                        // Convertir a PNG o JPG usando Canvas API
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        const svgData = new XMLSerializer().serializeToString(selectedIcon);
+                        const img = new Image();
+                        
+                        img.onload = () => {
+                            canvas.width = img.width;
+                            canvas.height = img.height;
+                            ctx.drawImage(img, 0, 0);
+                            const imageUrl = canvas.toDataURL(`image/${format}`);
+                            downloadFile(imageUrl, `${selectedIconName}.${format}`);
+                        };
+                        img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
+                    } else if (format === 'pdf') {
+                        // Generar un PDF con jsPDF
+                        const svgData = new XMLSerializer().serializeToString(selectedIcon);
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        const img = new Image();
+    
+                        img.onload = () => {
+                            canvas.width = img.width;
+                            canvas.height = img.height;
+                            ctx.drawImage(img, 0, 0);
+                            const imageUrl = canvas.toDataURL('image/png');
+    
+                            const pdf = new jsPDF();
+                            pdf.addImage(imageUrl, 'PNG', 10, 10, 190, 190); // Ajustar dimensiones según sea necesario
+                            pdf.save(`${selectedIconName}.pdf`);
+                        };
+                        img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
                     }
                 } else {
-                    alert('Primero selecciona un icono para editar.');
+                    alert('Selecciona y edita un icono antes de descargar.');
                 }
-            });
-        });
-
-        // Descargar el icono en el formato seleccionado
-        downloadButton.addEventListener('click', async () => {
-            if (selectedIcon) {
-                const format = formatSelector.value; // Obtener el formato seleccionado (SVG, PNG, JPEG, PDF)
-                
-                if (format === 'svg') {
-                    // Descargar como SVG
-                    const svgData = new XMLSerializer().serializeToString(selectedIcon);
-                    const blob = new Blob([svgData], { type: 'image/svg+xml' });
-                    const url = URL.createObjectURL(blob);
-                    downloadFile(url, `${selectedIconName}.svg`);
-                } else if (['png', 'jpeg'].includes(format)) {
-                    // Convertir a PNG o JPEG usando Canvas API
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
-                    const svgData = new XMLSerializer().serializeToString(selectedIcon);
-                    const img = new Image();
-                    
-                    img.onload = () => {
-                        canvas.width = img.width;
-                        canvas.height = img.height;
-                        ctx.drawImage(img, 0, 0);
-                        const imageUrl = canvas.toDataURL(`image/${format}`);
-                        downloadFile(imageUrl, `${selectedIconName}.${format}`);
-                    };
-                    img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
-                } else if (format === 'pdf') {
-                    // Generar un PDF con jsPDF
-                    const svgData = new XMLSerializer().serializeToString(selectedIcon);
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
-                    const img = new Image();
-
-                    img.onload = () => {
-                        canvas.width = img.width;
-                        canvas.height = img.height;
-                        ctx.drawImage(img, 0, 0);
-                        const imageUrl = canvas.toDataURL('image/png');
-
-                        const pdf = new jsPDF();
-                        pdf.addImage(imageUrl, 'PNG', 10, 10, 190, 190); // Ajustar dimensiones según sea necesario
-                        pdf.save(`${selectedIconName}.pdf`);
-                    };
-                    img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
-                }
-            } else {
-                alert('Selecciona y edita un icono antes de descargar.');
             }
+    
+            // Enlace de descarga para cada formato
+            const formatLinks = document.querySelectorAll('#format-options a');
+            formatLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const format = link.textContent.toLowerCase();
+                    downloadIcon(format);
+                });
+            });
+    
         });
-
-        // Función para descargar un archivo
-        function downloadFile(url, fileName) {
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = fileName;
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-    });
-
-
-
     </script>
+
 </body>
+
 </html>

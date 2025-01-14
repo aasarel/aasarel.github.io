@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <g id="manteniiento">
+    <circle cx="128" cy="128" r="128" fill="#e6e6e6"/>
+    <g id="vector">
+      <path d="M51.364,158.406l-15.253-15.253c-8.368-8.368-8.368-21.936,0-30.305l15.253-15.253" fill="none" stroke="#b2b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <path d="M157.43,203.66l-15.253,15.253c-8.368,8.368-21.936,8.368-30.305,0l-15.253-15.253" fill="none" stroke="#b2b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <path d="M202.685,97.594l15.253,15.253c8.368,8.368,8.368,21.936,0,30.305l-15.253,15.253" fill="none" stroke="#b2b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <path d="M96.619,52.34l15.253-15.253c8.368-8.368,21.936-8.368,30.305,0l15.253,15.253" fill="none" stroke="#b2b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <circle cx="127.024" cy="128" r="32" fill="#b2b2b2" stroke="#b2b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

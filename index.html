@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Sener</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-index">
+    <main class="main-content">
+        <h1>Iconos Tren Maya</h1>
+        <p>Encuentra, personaliza y descarga los elementos visuales perfectos para tus proyectos del Tren Interurbano y Tren Maya.</p>
+        <section class="featured-grid centered-grid">
+            <div class="grid-item" role="button" tabindex="0">
+                <a href="/sener.html">
+                    <img src="/img/logos/sener.svg" alt="sener">
+                    <h3>Sener</h3>
+                    <p>Recursos grupo sener.</p>
+                </a>
+            </div>
+            <div class="grid-item" role="button" tabindex="0">
+                <a href="/tren-interurbano.html">
+                    <img src="/img/logos/tren-interurbano.svg" alt="tren-interurbano">
+                    <h3>Tren Interurbano</h3>
+                    <p>Recursos Tren Interurbano.</p>
+                </a>
+            </div>
+            <div class="grid-item" role="button" tabindex="0">
+                <a href="/tren-maya.html">
+                    <img src="/img/logos/maya.svg" alt="tren-maya">
+                    <h3>Tren Maya</h3>
+                    <p>Recursos Tren Maya</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- Cargar navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('/includes/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+        });
+    </script>
+</body>
+</html>

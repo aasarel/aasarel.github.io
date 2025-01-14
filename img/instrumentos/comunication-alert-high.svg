@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <g id="instrumento-moderate">
+    <rect id="background" x="0" y="3" width="256" height="256" fill="#e6e6dc"/>
+    <g id="vector">
+      <path d="M52.34,161.406l-15.253-15.253c-8.368-8.368-8.368-21.936,0-30.305l15.253-15.253" fill="#e6e6dc" stroke="#ff7e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <path d="M158.406,206.66l-15.253,15.253c-8.368,8.368-21.936,8.368-30.305,0l-15.253-15.253" fill="#e6e6dc" stroke="#ff7e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <path d="M203.66,100.594l15.253,15.253c8.368,8.368,8.368,21.936,0,30.305l-15.253,15.253" fill="#e6e6dc" stroke="#ff7e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <path d="M97.594,55.34l15.253-15.253c8.368-8.368,21.936-8.368,30.305,0l15.253,15.253" fill="#e6e6dc" stroke="#ff7e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <circle cx="128" cy="131" r="32" fill="#ff7e00" stroke="#ff7e00" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

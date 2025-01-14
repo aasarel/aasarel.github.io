@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <g id="Master">
+    <g id="alerta-comunicacion">
+      <g id="background">
+        <rect x="15" y="15" width="226" height="226" fill="#e6e6dc"/>
+        <path d="M0,0v256h256V0H0ZM241,241H15V15h226v226Z" fill="#fcd84a"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Sener - Header</title>
+    <link rel="stylesheet" href="/css/styles-navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">UI Sener</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#">Recursos</a>
+                <div class="dropdown-content">
+                    <a href="#">Iconos</a>
+                    <a href="#">Logotipos</a>
+                    <a href="#">Paleta de colores</a>
+                </div>
+            </div>
+            <a href="#">Solicitar</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="search-container">
+            <div class="search-options">
+                <button id="options">Iconos
+                    <span class="material-symbols-outlined">arrow_drop_down</span>
+                </button>
+                <ul id="format-options" style="display: none">
+                    <li>Logotipos</li>
+                    <li>Paleta de colores</li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Busca iconos, logotipos, paleta de colores...">
+                <span class="search-icon">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" alt="Search">
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const optionsButton = document.getElementById("options");
+            const formatOptions = document.getElementById("format-options");
+    
+            optionsButton.addEventListener("click", (e) => {
+                e.stopPropagation();
+                formatOptions.style.display =
+                    formatOptions.style.display === "block" ? "none" : "block";
+            });
+    
+            document.addEventListener("click", () => {
+                formatOptions.style.display = "none";
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
